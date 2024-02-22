@@ -1,0 +1,39 @@
+{
+  "name": "create-scrapeyard",
+  "version": "0.9.3",
+  "description": "Initialization tool for scrapeyard.",
+  "license": "MIT",
+  "keywords": [
+    "scraping"
+  ],
+  "author": "anasouardini",
+  "repository": {
+    "url": "https://github.com/anasouardini/create-scrapeyard"
+  },
+  "bugs": {
+    "url": "https://github.com/anasouardini/create-scrapeyard/issues"
+  },
+  "files": [
+    "./data/**/*",
+    "./bin/**/*"
+  ],
+  "bin": {
+    "default": "./bin/cli/scrapeyard.js"
+  },
+  "scripts": {
+    "formatCheck": "prettier . --check",
+    "lint": "tsc --noEmit",
+    "build": "command rm -rf ./bin && tsc --b ./tsconfig.bin.json",
+    "ci": "npm run formatCheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fs-extra": "^11.2.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  }
+}
